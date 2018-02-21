@@ -8,12 +8,22 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var index = require('./controllers/index');
+var users = require('./controllers/users');
 
 var app = express();
 
 mongoose.connect(process.env.MONGODB_URI);
+
+const db = mongoose.connection
+
+db.on('open', () => {
+    console.log('Successfully connected to MongoDB')
+})
+
+db.on('error', (err) => {
+    console.log(err)
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
