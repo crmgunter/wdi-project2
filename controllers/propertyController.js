@@ -56,15 +56,16 @@ router.get('/:id', (req, res) => {
   })
 })
 
-// // edit page
-// router.get('/:id/edit', (req, res) => {
-//   User.findById(req.params.id).then((user) => {
-//     res.render('user/edit', {
-//       id: req.params.id,
-//       user: user
-//     })
-//   })
-// })
+// edit page
+router.get('/:id/edit', (req, res) => {
+  User.findById(req.params.userId).then((user) => {
+      const property = user.properties.id(req.params.id)
+    res.render('property/edit', {
+      userId: req.params.userId,
+      property: property
+    })
+  })
+})
 
 // //update
 // router.patch('/:id', (req, res) => {
