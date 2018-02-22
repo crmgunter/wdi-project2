@@ -5,6 +5,7 @@ const User = require('../models/user')
 /* GET users listing. */
 router.get('/', function (req, res) {
   User.find().then((users) => {
+    console.log(users)
     res.render('user/index', {
       users: users
     })

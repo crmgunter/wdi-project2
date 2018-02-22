@@ -2,11 +2,11 @@
 
 {{#each users}}
 <div>    
+    <img src="{{image}}"/>
     <h2><a href="/users/{{_id}}">{{username}}</a></h2>
     <h4>{{firstName}} {{lastName}}</h4>
     <p>{{email}}</p>
     <p>{{phoneNumber}}</p>
-    <img src="{{image}}"/>
     <h4>Properties</h4>
     {{#each properties}}
     <p>{{address}}</p>
@@ -19,4 +19,3 @@
 {{/each}}
 
 <button class="btn"><a href="users/new">Create a new account</a></button>
-<button class="btn"><a href="users/:id/edit">Edit Account</a></button>
