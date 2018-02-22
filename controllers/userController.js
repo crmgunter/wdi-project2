@@ -44,12 +44,8 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
   User.findById(req.params.id).then((user) => {
     res.render('user/edit', {
-      username: req.body.username,
-      image: req.body.image,
-      email: req.body.email,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      phoneNumber: req.body.phoneNumber
+      id: req.params.id,
+      user: user
     })
   })
 })
@@ -65,6 +61,13 @@ router.patch('/:id', (req, res) => {
     phoneNumber: req.body.phoneNumber
   }, {new: true}).then((updatedUser) => {
     res.redirect(`/users/${updatedUser.id}`)
+  })
+})
+
+// delete
+router.delete('/:id', (req, res) => {
+  User.findByIdAndRemove(req.params.id).then(() => {
+    res.redirect('/users')
   })
 })
 

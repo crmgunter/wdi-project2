@@ -7,3 +7,6 @@
 
 <button class="btn"><a href= "/users">back to users</a></button>
 <button class="btn"><a href="/users/{{user._id}}/edit">Edit Account</a></button>
+<form action="/users/{{user.id}}?_method=DELETE" method="POST">
+    <button class="btn" type="submit">Delete {{user.username}}</button>
+</form>
