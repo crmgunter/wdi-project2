@@ -2,7 +2,7 @@
 
 {{#each users}}
 <div>    
-    <h2>{{username}}</h2>
+    <h2><a href="/users/{{_id}}">{{username}}</a></h2>
     <h4>{{firstName}} {{lastName}}</h4>
     <p>{{email}}</p>
     <p>{{phoneNumber}}</p>
@@ -17,3 +17,5 @@
 </div>
 
 {{/each}}
+
+<button class="btn"><a href="users/new">Create a new account</a></button>
