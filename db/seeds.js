@@ -32,6 +32,7 @@ const newton = new Property({
 
 const cameron = new User({
     username: "crmgunter",
+    img: "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/14962703_10155539168928636_4733508502386582906_n.jpg?oh=c494c3a2a7781b6c72a36c3624803a7b&oe=5B4C363B",
     email: "crmgunter@gmail.com",
     firstName: "Cameron",
     lastName: "Gunter",
@@ -41,6 +42,7 @@ const cameron = new User({
 
 const owen = new User({
     username: "owenl",
+    img: "https://media-exp2.licdn.com/media/AAMAAQDuAAgAAQAAAAAAABB2AAAAJGQ4NWE2N2QyLWZjMTktNDNlMS04NTAyLWQ4MTRmNWI1NWJhMA.bin",
     email: "owen@email.com",
     firstName: "Owen",
     lastName: "Liversidge",
@@ -49,13 +51,9 @@ const owen = new User({
 })
 
 Property.remove(() => {
-
     return User.remove()
-
 }).then(() => {
-
     return User.insertMany([cameron, owen])
-
 }).then(() => {
 
     console.log('Saved Successfully')
