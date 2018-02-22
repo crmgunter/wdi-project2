@@ -5,9 +5,11 @@
     <div>
         <img src="{{homeImage}}" />
         <p><a href="properties/{{id}}">{{address}}</a></p>
-        <p>Price: {{price}}</p>
+        <p>${{price}}</p>
         <p>Description: {{description}}</p>
     </div>
 {{/each}}
 
 <button class="btn"><a href="properties/new">Add a new property</a></button>
+
+<button class="btn"><a href="/users">Back to users</a></button>

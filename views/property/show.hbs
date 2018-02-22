@@ -6,3 +6,7 @@
 
 <button class="btn"><a href="/users/{{userId}}/properties/{{property._id}}/edit">Edit this property</a></button>
 <button class="btn"><a href="/users/{{userId}}/properties">Back to properties</a></button>
+
+<form method="POST" action="/users/{{userId}}/properties/{{property._id}}?_method=DELETE">
+    <button class="btn" type="submit">Delete this property</button>
+</form>

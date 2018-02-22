@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
@@ -14,6 +15,3 @@ img {
   width: 200px;
 }
 
-.show-right {
-  text-align: center
-}

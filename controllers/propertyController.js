@@ -83,11 +83,15 @@ router.patch('/:id', (req, res) => {
   })
 })   
 
-// // delete
-// router.delete('/:id', (req, res) => {
-//   User.findByIdAndRemove(req.params.id).then(() => {
-//     res.redirect('/users')
-//   })
-// })
+// delete
+router.delete('/:id', (req, res) => {
+  User.findById(req.params.userId).then((user) => {
+      const property = user.properties.id(req.params.id)
+      property.remove()
+      return user.save()
+  }).then(() => {
+    res.redirect(`/users/${req.params.userId}/properties`)
+  })
+})
 
 module.exports = router;
