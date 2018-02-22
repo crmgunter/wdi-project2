@@ -6,10 +6,14 @@
     <h4>{{firstName}} {{lastName}}</h4>
     <p>{{email}}</p>
     <p>{{phoneNumber}}</p>
-    <p>{{properties}}</p>
-    <p>{{leases}}</p>
     <img src="{{img}}"/>
-
+    <h4>Properties</h4>
+    {{#each properties}}
+    <p>{{address}}</p>
+    <p>{{landlord}}</p>
+    <p>{{price}}</p>
+    <p>{{description}}</p>
+    {{/each}}
 </div>
 
 {{/each}}
