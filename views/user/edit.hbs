@@ -1,0 +1,25 @@
+<form method="POST" action="/users/{{id}}?_method=PATCH">
+    <div>
+        <label for="username">Your Username</label>
+        <input type="text" name="username">
+    </div>
+    <div>
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName">
+    </div>
+    <div>
+        <label for="lastName">Last name</label>
+        <input type="text" name="lastName">
+    </div>
+    <div>
+        <label for="email">Enter a valid email</label>
+        <input type="text" name="email">
+    </div>
+    <div>
+        <label for="phoneNumber">Phone number</label>
+        <input type="text" name="phoneNumber">
+    </div>
+    <button type="submit">Create account</button>
+
+    <button><a href="/users">cancel</a></button>
+</form>
