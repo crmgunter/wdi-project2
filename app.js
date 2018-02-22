@@ -58,4 +58,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+console.log('Meat sizzling hot on PORT 3000')
+
 module.exports = app;
