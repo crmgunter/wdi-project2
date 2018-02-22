@@ -1,1 +1,27 @@
-<h1>hello Clarice</h1>
+<h1>Edit {{property.address}}</h1>
+
+<form method="POST" action="/users/{{userId}}/properties/{{property._id}}?_method=PATCH">
+    <div>
+        <label for="address">Address</label>
+        <input type="text" name="address" value="{{property.address}}">
+    </div>
+    <div>
+        <label for="price">Price</label>
+        <input type="text" name="price" value="{{property.price}}">
+    </div>
+    <div>
+        <label for="landlord">Landlord</label>
+        <input type="text" name="landlord" value="{{property.landlord}}">
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <input type="text" name="description" value="{{property.description}}">
+    </div>
+    <div>
+        <label for="homeImage">Image URL</label>
+        <input type="text" name="homeImage" value="{{property.homeImage}}">
+    </div>
+    <button type="submit">Update account</button>
+
+    <button><a href="/propertys/{{id}}">cancel</a></button>
+</form>
