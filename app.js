@@ -11,6 +11,7 @@ const methodOverride = require('method-override')
 
 var index = require('./controllers/index');
 var userController = require('./controllers/userController');
+const propertyController = require('./controllers/propertyController')
 
 var app = express();
 
@@ -39,8 +40,10 @@ app.use(cookieParser());
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use controllers
 app.use('/', index);
 app.use('/users', userController);
+app.use('/users/:userId/properties', propertyController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -20,6 +20,7 @@ const hillSt = new Property({
     address: "1281 Hill St SE, Atlanta Ga. 30315",
     landlord: "dumb guy",
     price: 1200,
+    homeImage: "https://photos.zillowstatic.com/p_c/ISqtvxq9429ljg0000000000.jpg",
     description: "once a popular local show house, it is now a nice, yuppified home."
 })
 
@@ -27,6 +28,7 @@ const newton = new Property({
     address: "1416 Newton Ave SE, Atlanta Ga. 30316",
     landlord: "David",
     price: 1800,
+    homeImage: "https://photos.zillowstatic.com/p_h/ISu0w9z8x91axn0000000000.jpg",
     description: "A nice house."
 })
 

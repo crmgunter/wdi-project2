@@ -1,0 +1,13 @@
+<h1>{{user.username}}</h1>
+
+<h2>Properties</h2>
+{{#each properties}}
+    <div>
+        <img src="{{homeImage}}" />
+        <p>{{address}}</p>
+        <p>Price: {{price}}</p>
+        <p>Description: {{description}}</p>
+    </div>
+{{/each}}
+
+<button class="btn"><a href="properties/new">Add a new property</a></button>
