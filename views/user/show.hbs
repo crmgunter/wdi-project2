@@ -1,12 +1,23 @@
-<img src="{{image}}"/>
-<h1>{{user.username}}</h1>
-<h4>{{user.firstName}} {{user.lastName}}</h4>
-<h4>{{user.email}}</h4>
-<h4>{{user.phoneNumber}}</h4>
-<h4>{{user.properties}}</h4>
+<div class="row">
+    <div class="col s2">
+        <img src="{{user.image}}" />
+        <h1>{{user.username}}</h1>
+        <h4>{{user.firstName}} {{user.lastName}}</h4>
+        <h4>{{user.email}}</h4>
+        <h4>{{user.phoneNumber}}</h4>
+        <h4>{{user.properties}}</h4>
+    </div>
+    <div class="col s10 show-right">
+        <a href="">Properties</a>
+    </div>
+</div>
 
-<button class="btn"><a href= "/users">back to users</a></button>
-<button class="btn"><a href="/users/{{user._id}}/edit">Edit Account</a></button>
+<button class="btn">
+    <a href="/users">back to users</a>
+</button>
+<button class="btn">
+    <a href="/users/{{user._id}}/edit">Edit Account</a>
+</button>
 <form action="/users/{{user.id}}?_method=DELETE" method="POST">
     <button class="btn" type="submit">Delete {{user.username}}</button>
 </form>
