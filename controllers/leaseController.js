@@ -24,26 +24,25 @@ router.get('/new', (req, res) => {
     })
 })
 
-// // POST 
-// router.post('/', (req, res) => {
-//     const userId = req.params.userId
-//     const newProperty = req.body
+// POST 
+router.post('/', (req, res) => {
+    const userId = req.params.userId
+    const newLease = req.body
 
-//     User.findById(userId).then((user) => {
-//         const newProperty = new Property({
-//             address: req.body.address,
-//             landlord: req.body.landlord,
-//             price: req.body.price,
-//             description: req.body.description,
-//             homeImage: req.body.homeImage
-//         })
+    User.findById(userId).then((user) => {
+        const newLease = new Lease({
+            property: req.body.property,
+            tenants: req.body.tenants,
+            rentDue: req.body.rentDue,
+            rentPaid: req.body.rentPaid
+        })
 
-//         user.properties.push(newProperty)
-//         return user.save()
-//     }).then((updatedUser) => {
-//         res.redirect(`/users/${req.params.userId}/properties`)
-//     })
-// })
+        user.leases.push(newLease)
+        return user.save()
+    }).then((updatedUser) => {
+        res.redirect(`/users/${req.params.userId}/leases`)
+    })
+})
 
 // // SHOW PAGE
 // router.get('/:id', (req, res) => {
