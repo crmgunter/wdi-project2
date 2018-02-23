@@ -67,21 +67,20 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-// //update
-// router.patch('/:id', (req, res) => {
-//     User.findById(req.params.userId).then((user) => {
-//         const property = user.properties.id(req.params.id)
-//         property.address = req.body.address
-//         property.landlord = req.body.landlord
-//         property.price = req.body.price
-//         property.description = req.body.description
-//         property.homeImage = req.body.homeImage
+//update
+router.patch('/:id', (req, res) => {
+    User.findById(req.params.userId).then((user) => {
+        const lease = user.leases.id(req.params.id)
+        lease.property = req.body.property
+        lease.tenants = req.body.tenants
+        lease.rentDue = req.body.rentDue
+        lease.rentPaid = req.body.rentPaid
 
-//         return user.save()
-//     }).then((updatedUser) => {
-//         res.redirect(`/users/${updatedUser._id}/properties/${req.params.id}`)
-//     })
-// })
+        return user.save()
+    }).then((updatedUser) => {
+        res.redirect(`/users/${updatedUser._id}/leases/${req.params.id}`)
+    })
+})
 
 // // delete
 // router.delete('/:id', (req, res) => {
