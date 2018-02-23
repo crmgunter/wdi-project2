@@ -56,16 +56,16 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// // edit page
-// router.get('/:id/edit', (req, res) => {
-//     User.findById(req.params.userId).then((user) => {
-//         const property = user.properties.id(req.params.id)
-//         res.render('property/edit', {
-//             userId: req.params.userId,
-//             property: property
-//         })
-//     })
-// })
+// edit page
+router.get('/:id/edit', (req, res) => {
+    User.findById(req.params.userId).then((user) => {
+        const lease = user.leases.id(req.params.id)
+        res.render('lease/edit', {
+            userId: req.params.userId,
+            lease: lease
+        })
+    })
+})
 
 // //update
 // router.patch('/:id', (req, res) => {

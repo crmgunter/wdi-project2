@@ -1,0 +1,21 @@
+<h1>Edit Lease</h1>
+<form method="POST" action="/users/{{userId}}/leases/{{lease._id}}?_method=PATCH">
+    <div>
+        <label for="property">property</label>
+        <input type="text" name="property" value="{{lease.property}}">
+    </div>
+    <div>
+        <label for="tenants">tenants</label>
+        <input type="text" name="tenants" value="{{lease.tenants}}">
+    </div>
+    <div>
+        <label for="rentDue">rent due</label>
+        <input type="text" name="rentDue" value="{{lease.rentDue}}">
+    </div>
+    <div>
+        <label for="rentPaid">rent paid</label>
+        <input type="text" name="rentPaid" value="{{lease.rentPaid}}">
+    </div>
+    <button type="submit">Add Lease</button>
+
+</form>
