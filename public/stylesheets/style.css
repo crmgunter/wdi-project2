@@ -1,17 +1,47 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav {
+  background: red;
+  
+}
+
+.show-container {
+  margin: 100px auto;
 }
 
 a {
   color: #00B7FF;
 }
 
-img {
+.profile {
   border:1px, solid, black;
   border-radius: 50%;
   height: 200px;
   width: 200px;
 }
 
+.user-container-thumbnail {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-thumbnail {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.page-footer {
+  background-color: red;
+}

@@ -1,21 +1,15 @@
 <h1>Users</h1>
-
-{{#each users}}
-<div>    
-    <img src="{{image}}"/>
-    <h2><a href="/users/{{_id}}">{{username}}</a></h2>
-    <h4>{{firstName}} {{lastName}}</h4>
-    <p>{{email}}</p>
-    <p>{{phoneNumber}}</p>
-    <h4>Properties</h4>
-    {{#each properties}}
-    <p>{{address}}</p>
-    <p>{{landlord}}</p>
-    <p>{{price}}</p>
-    <p>{{description}}</p>
+<div class="user-container-thumbnail">
+    {{#each users}}
+    <div class="user-thumbnail">
+        <img class="profile" src="{{image}}" />
+        <h2>
+            <a href="/users/{{_id}}">{{username}}</a>
+        </h2>
+    </div>
     {{/each}}
 </div>
 
-{{/each}}
-
-<button class="btn"><a href="users/new">Create a new account</a></button>
+<button class="btn">
+    <a href="users/new">Create a new account</a>
+</button>
