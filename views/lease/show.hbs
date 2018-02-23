@@ -4,7 +4,10 @@
 <p>{{lease.rentDue}}</p>
 <p>{{lease.rentPaid}}</p>
 
+
+
 <button class="btn"><a href="/users/{{userId}}/leases/{{lease._id}}/edit">Edit this property</a></button>
+<button class="btn"><a href="/users/{{userId}}/leases">Back to User</a></button>
 <form method="POST" action="/users/{{userId}}/leases/{{lease._id}}?_method=DELETE">
     <button class="btn" type="submit">Delete this property</button>
 </form>
