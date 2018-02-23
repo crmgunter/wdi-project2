@@ -17,12 +17,12 @@ router.get('/', function (req, res) {
     })
 });
 
-// // NEW
-// router.get('/new', (req, res) => {
-//     res.render('property/new', {
-//         userId: req.params.userId
-//     })
-// })
+// NEW
+router.get('/new', (req, res) => {
+    res.render('lease/new', {
+        userId: req.params.userId
+    })
+})
 
 // // POST 
 // router.post('/', (req, res) => {
