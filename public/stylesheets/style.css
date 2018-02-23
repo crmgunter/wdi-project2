@@ -11,8 +11,28 @@ main {
 }
 
 nav {
-  background: red;
+  background: black;
+  opacity: .5;
   
+}
+
+.land-screen {
+  height: 100vh;
+}
+
+.cover {
+  background: rgba(0, 0, 0, .1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.land-text {
+  margin: auto;
+  color: white;
+  background: rgba(0, 0, 0, .5);
+  height: 50%;
+  width: 50%;
 }
 
 .show-container {
