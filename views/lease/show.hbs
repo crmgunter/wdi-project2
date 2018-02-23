@@ -3,3 +3,7 @@
 <p>{{lease.tenants}}</p>
 <p>{{lease.rentDue}}</p>
 <p>{{lease.rentPaid}}</p>
+
+<form method="POST" action="/users/{{userId}}/leases/{{lease._id}}?_method=DELETE">
+    <button class="btn" type="submit">Delete this property</button>
+</form>
