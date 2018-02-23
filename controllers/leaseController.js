@@ -44,17 +44,17 @@ router.post('/', (req, res) => {
     })
 })
 
-// // SHOW PAGE
-// router.get('/:id', (req, res) => {
-//     User.findById(req.params.userId).then((user) => {
-//         const property = user.properties.id(req.params.id)
+// SHOW PAGE
+router.get('/:id', (req, res) => {
+    User.findById(req.params.userId).then((user) => {
+        const lease = user.leases.id(req.params.id)
 
-//         res.render('property/show', {
-//             userId: req.params.userId,
-//             property: property
-//         })
-//     })
-// })
+        res.render('lease/show', {
+            userId: req.params.userId,
+            lease: lease
+        })
+    })
+})
 
 // // edit page
 // router.get('/:id/edit', (req, res) => {
