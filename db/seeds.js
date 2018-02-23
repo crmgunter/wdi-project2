@@ -16,6 +16,7 @@ db.on('error', (err) => {
     console.log(err)
 })
 
+
 const hillSt = new Property({
     address: "1281 Hill St SE, Atlanta Ga. 30315",
     landlord: "dumb guy",
@@ -32,6 +33,13 @@ const newton = new Property({
     description: "A nice house."
 })
 
+const hillStLease = new Lease({
+    property: [hillSt],
+    rentDue: 1200,
+    tenants: "Ben, Jeff, Cam",
+    rentPaid: 800
+})
+
 const cameron = new User({
     username: "crmgunter",
     image: "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/14962703_10155539168928636_4733508502386582906_n.jpg?oh=c494c3a2a7781b6c72a36c3624803a7b&oe=5B4C363B",
@@ -39,6 +47,7 @@ const cameron = new User({
     firstName: "Cameron",
     lastName: "Gunter",
     properties: [hillSt],
+    leases: [hillStLease],
     phoneNumber: 7707730154
 })
 
@@ -49,11 +58,14 @@ const owen = new User({
     firstName: "Owen",
     lastName: "Liversidge",
     properties: [newton],
+    leases: [],
     phoneNumber: 6789012345
 })
 
 Property.remove(() => {
     return User.remove()
+}).then(() => {
+    return Lease.remove()
 }).then(() => {
     return User.insertMany([cameron, owen])
 }).then(() => {

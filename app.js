@@ -12,6 +12,7 @@ const methodOverride = require('method-override')
 var index = require('./controllers/index');
 var userController = require('./controllers/userController');
 const propertyController = require('./controllers/propertyController')
+const leaseController = require('./controllers/leaseController')
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', userController);
 app.use('/users/:userId/properties', propertyController)
+app.use('/users/:userId/leases', leaseController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

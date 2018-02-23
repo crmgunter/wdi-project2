@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 
 const leaseSchema = new Schema ({
     property: [propertySchema],
-    price: Number,
+    rentDue: Number,
     tenants: String,
-    rent: Number
+    rentPaid: Number
 })
 
 module.exports = leaseSchema
