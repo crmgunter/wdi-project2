@@ -1,9 +1,11 @@
-<div class="container show-container">
+<div class="row">
+    <div class="col l4 s4">
+        <div class="container show-container">
     <img class="profile" src="{{user.image}}" />
-    <h1>{{user.username}}</h1>
-    <h4>{{user.firstName}} {{user.lastName}}</h4>
-    <h4>{{user.email}}</h4>
-    <h4>{{user.phoneNumber}}</h4>
+    <h5>{{user.username}}</h5>
+    <h5>{{user.firstName}} {{user.lastName}}</h5>
+    <h6>{{user.email}}</h6>
+    <h6>{{user.phoneNumber}}</h6>
     
     <button class="btn">
         <a href="/users/{{user._id}}/properties">Properties</a>
@@ -11,14 +13,40 @@
     <button class="btn">
         <a href="/users/{{user._id}}/leases">Leases</a>
     </button>
-</div>
-
-<button class="btn">
-    <a href="/users">back to users</a>
-</button>
-<button class="btn">
+    <button class="btn">
     <a href="/users/{{user._id}}/edit">Edit Account</a>
 </button>
 <form action="/users/{{user.id}}?_method=DELETE" method="POST">
     <button class="btn" type="submit">Delete {{user.username}}</button>
 </form>
+</div>
+    </div>
+
+    <div class="col l8 s8">
+        <h4>Properties</h4>
+        {{#each user.properties}}
+        <img src="{{homeImage}}"/>"
+        <p>{{address}}</p>
+        <p>{{price}}</p>
+        {{/each}}
+
+        {{#each properties}}
+    <div>
+        <img src="{{homeImage}}" />
+        <p><a href="properties/{{id}}">{{address}}</a></p>
+        <p>${{price}}</p>
+        <p>Description: {{description}}</p>
+    </div>
+{{/each}}
+        <button class="btn">
+    <a href="/users">back to users</a>
+</button>
+        </div>
+</div>
+
+
+{{!-- 
+
+
+
+ --}}

@@ -15,6 +15,7 @@ nav {
   background: black;
 }
 
+/* =================================================== */
 /* THIS SECTION IS FOR THE LANDING SCREEN SIGN UP SECTION */
 
 .land-screen {
@@ -49,9 +50,16 @@ nav {
   margin: 30px auto;
 }
 
+/* =================================================== */
+/* SHOW PAGE STYLES */
 .show-container {
-  margin: 100px auto;
+  height: 100vh;
+  margin-top: 20px;;
+  background: gray;
+  width: 33vw;
+  padding: 20px;
 }
+/* END OF SHOW PAGE STYLES */
 
 a {
   color: #00B7FF;
@@ -64,16 +72,25 @@ a {
   width: 200px;
 }
 
+/* =================================================== */
+/* USER INDEX PAGE STYLES */
 .user-container-thumbnail {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 30px auto;
 }
 
 .user-thumbnail {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 20px;
+}
+
+/* END USER INDEX PAGE STYLES */
+
+.btn {
+  background: black;
 }
 
 .page-footer {
