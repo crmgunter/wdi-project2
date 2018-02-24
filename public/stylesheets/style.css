@@ -12,9 +12,9 @@ main {
 
 nav {
   background: black;
-  opacity: .5;
-  
 }
+
+/* THIS SECTION IS FOR THE LANDING SCREEN SIGN UP SECTION */
 
 .land-screen {
   height: 100vh;
@@ -33,6 +33,19 @@ nav {
   background: rgba(0, 0, 0, .5);
   height: 50%;
   width: 50%;
+  padding: 0 30px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+/* THIS IS END OF LANDING SCREEN SIGN UP SECTION */
+
+/* =================================================== */
+
+/* This is for new user form */
+
+.newuser-form-container {
+  width: 50%;
+  margin: 30px auto;
 }
 
 .show-container {

@@ -1,33 +1,35 @@
 <h1>Join the Site!</h1>
 
-<form method="POST" action="/users">
-    <div>
-        <label for="username">Your Username</label>
-        <input type="text" name="username">
-    </div>
-    <div>
-        <label for="firstName">First name</label>
-        <input type="text" name="firstName">
-    </div>
-    <div>
-        <label for="lastName">Last name</label>
-        <input type="text" name="lastName">
-    </div>
-    <div>
-        <label for="email">Enter a valid email</label>
-        <input type="text" name="email">
-    </div>
-    <div>
-        <label for="phoneNumber">Phone number</label>
-        <input type="text" name="phoneNumber">
-    </div>
-    <div>
-        <label for="image">Image URL</label>
-        <input type="text" name="image">
-    </div>
-    <button type="submit">Create account</button>
+<div class="container newuser-form-container">
+    <form method="POST" action="/users">
+        <div>
+            <label for="username">Your Username</label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName">
+        </div>
+        <div>
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName">
+        </div>
+        <div>
+            <label for="email">Enter a valid email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="phoneNumber">Phone number</label>
+            <input type="text" name="phoneNumber">
+        </div>
+        <div>
+            <label for="image">Image URL</label>
+            <input type="text" name="image">
+        </div>
+        <button class="btn" type="submit">Create account</button>
 
-    <button><a href="/users">back to users</a></button>
-</form>
-
-
+        <button class="btn">
+            <a href="/users">back to users</a>
+        </button>
+    </form>
+</div>
