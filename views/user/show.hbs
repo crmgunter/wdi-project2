@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col l4 s4">
         <div class="container show-container">
-    <img class="profile" src="{{user.image}}" />
+    <img class="profile responsive-img" src="{{user.image}}" />
     <h5>{{user.username}}</h5>
     <h5>{{user.firstName}} {{user.lastName}}</h5>
     <h6>{{user.email}}</h6>
@@ -22,22 +22,15 @@
 </div>
     </div>
 
-    <div class="col l8 s8">
+    <div class="col l8 s8 container">
         <h4>Properties</h4>
         {{#each user.properties}}
-        <img src="{{homeImage}}"/>"
+        <img class="responsive-img" src="{{homeImage}}"/>"
         <p>{{address}}</p>
         <p>{{price}}</p>
         {{/each}}
 
-        {{#each properties}}
-    <div>
-        <img src="{{homeImage}}" />
-        <p><a href="properties/{{id}}">{{address}}</a></p>
-        <p>${{price}}</p>
-        <p>Description: {{description}}</p>
-    </div>
-{{/each}}
+        
         <button class="btn">
     <a href="/users">back to users</a>
 </button>
