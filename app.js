@@ -13,6 +13,7 @@ var index = require('./controllers/index');
 var userController = require('./controllers/userController');
 const propertyController = require('./controllers/propertyController')
 const leaseController = require('./controllers/leaseController')
+const allPropertyController = require('./controllers/allPropertyController')
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use('/', index);
 app.use('/users', userController);
 app.use('/users/:userId/properties', propertyController)
 app.use('/users/:userId/leases', leaseController)
+app.use('/properties', allPropertyController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

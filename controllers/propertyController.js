@@ -4,7 +4,7 @@ const router = express.Router({ mergeParams: true });
 const User = require('../models/user')
 const Property = require('../models/property')
 
-/* GET users listing. */
+
 router.get('/', function (req, res) {
     User.findById(req.params.userId).then((user) => {
         console.log(user)
@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
             description: req.body.description,
             homeImage: req.body.homeImage
         })
-        
+
         user.properties.push(newProperty)
         return user.save()
     }).then((updatedUser) => {
@@ -46,52 +46,52 @@ router.post('/', (req, res) => {
 
 // SHOW PAGE
 router.get('/:id', (req, res) => {
-  User.findById(req.params.userId).then((user) => {
-    const property = user.properties.id(req.params.id)
+    User.findById(req.params.userId).then((user) => {
+        const property = user.properties.id(req.params.id)
 
-    res.render('property/show', {
-      userId: req.params.userId,
-      property: property
+        res.render('property/show', {
+            userId: req.params.userId,
+            property: property
+        })
     })
-  })
 })
 
 // edit page
 router.get('/:id/edit', (req, res) => {
-  User.findById(req.params.userId).then((user) => {
-      const property = user.properties.id(req.params.id)
-    res.render('property/edit', {
-      userId: req.params.userId,
-      property: property
+    User.findById(req.params.userId).then((user) => {
+        const property = user.properties.id(req.params.id)
+        res.render('property/edit', {
+            userId: req.params.userId,
+            property: property
+        })
     })
-  })
 })
 
 //update
 router.patch('/:id', (req, res) => {
-  User.findById(req.params.userId).then((user) => {
-      const property = user.properties.id(req.params.id)
-      property.address = req.body.address
-      property.landlord = req.body.landlord
-      property.price = req.body.price
-      property.description = req.body.description
-      property.homeImage = req.body.homeImage
+    User.findById(req.params.userId).then((user) => {
+        const property = user.properties.id(req.params.id)
+        property.address = req.body.address
+        property.landlord = req.body.landlord
+        property.price = req.body.price
+        property.description = req.body.description
+        property.homeImage = req.body.homeImage
 
-      return user.save()
-  }).then((updatedUser) => {
-      res.redirect(`/users/${updatedUser._id}/properties/${req.params.id}`)
-  })
-})   
+        return user.save()
+    }).then((updatedUser) => {
+        res.redirect(`/users/${updatedUser._id}/properties/${req.params.id}`)
+    })
+})
 
 // delete
 router.delete('/:id', (req, res) => {
-  User.findById(req.params.userId).then((user) => {
-      const property = user.properties.id(req.params.id)
-      property.remove()
-      return user.save()
-  }).then(() => {
-    res.redirect(`/users/${req.params.userId}/properties`)
-  })
+    User.findById(req.params.userId).then((user) => {
+        const property = user.properties.id(req.params.id)
+        property.remove()
+        return user.save()
+    }).then(() => {
+        res.redirect(`/users/${req.params.userId}/properties`)
+    })
 })
 
 module.exports = router;
