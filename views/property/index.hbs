@@ -1,13 +1,16 @@
-{{!-- <h1>{{user.username}}</h1>
+{{!--
+<h1>{{user.username}}</h1>
 
 <h2>Properties</h2>
 {{#each properties}}
-    <div>
-        <img class="responsive-img" src="{{homeImage}}" />
-        <p><a href="properties/{{id}}">{{address}}</a></p>
-        <p>${{price}}</p>
-        <p>Description: {{description}}</p>
-    </div>
+<div>
+    <img class="responsive-img" src="{{homeImage}}" />
+    <p>
+        <a href="properties/{{id}}">{{address}}</a>
+    </p>
+    <p>${{price}}</p>
+    <p>Description: {{description}}</p>
+</div>
 {{/each}} --}}
 
 <div class="row">
@@ -35,20 +38,26 @@
     </div>
 
     <div class="col l8 s8 container">
-        <h4>Properties</h4>
-        {{#each user.properties}}
-        <img class="responsive-img" src="{{homeImage}}" />
-        <p><a href="properties/{{id}}">{{address}}</a></p>
-        <p>{{price}}</p>
-        {{/each}}
+        <div class="property-index">
+            <h4>Properties</h4>
+            {{#each user.properties}}
+            <img class="responsive-img" src="{{homeImage}}" />
+            <p>
+                <a href="properties/{{id}}">{{address}}</a>
+            </p>
+            <p>{{price}}</p>
+            {{/each}}
+            
+            <button class="btn">
+                <a href="properties/new">Add a new property</a>
+            </button>
+
+            <button class="btn">
+                <a href="/users/{{user._id}}">Back to user</a>
+            </button>
+        </div>
 
 
-        <button class="btn">
-            <a href="/users/{{user.id}}">back to user</a>
-        </button>
+
     </div>
 </div>
-
-<button class="btn"><a href="properties/new">Add a new property</a></button>
-
-<button class="btn"><a href="/users/{{user._id}}">Back to user</a></button>

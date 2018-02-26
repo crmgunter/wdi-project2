@@ -23,41 +23,45 @@
     </div>
 
     <div class="col l8 s8 container">
-        <h4>About {{user.firstName}} {{user.lastName}}</h4>
 
-        <p>{{user.about}}</p>
 
         <!-- 
             TRY THIS SHIT OUT BOI -->
-        <div class="parallax-container each-user-show-image">
-            <div class="user-show-box">
-                <div class="user-show-box-text">
-                    <h5>View {{user.firstName}}'s Properties</h5>
+        <div class="show-page-right">
+            <button class="btn">
+                <a href="/users">back to users</a>
+            </button>
+            <div class="parallax-container each-user-show-image">
+                <div class="user-show-box">
+                    <div class="user-show-box-text">
+                        <a href="/users/{{user._id}}/properties"><h5>View {{user.firstName}}'s Properties</h5></a>
+                    </div>
+                </div>
+                <div class="parallax responsive-img user-show-image">
+                    <img src="https://images.unsplash.com/photo-1464938769256-c01dc51fc983?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7fcb1fa168a66f1365124a349c69da5c&auto=format&fit=crop&w=800&q=60">
                 </div>
             </div>
-            <div class="parallax responsive-img user-show-image">
-                <img src="https://images.unsplash.com/photo-1464938769256-c01dc51fc983?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7fcb1fa168a66f1365124a349c69da5c&auto=format&fit=crop&w=800&q=60">
-            </div>
-        </div>
 
-        <div class="parallax-container">
-            <div class="user-show-box">
-                <div class="user-show-box-text">
-                    <h5>View {{user.firstName}}'s Leases</h5>
+            <div class="parallax-container">
+                <div class="user-show-box">
+                    <div class="user-show-box-text">
+                        <a href="/users/{{user._id}}/leases"><h5>View {{user.firstName}}'s Leases</h5></a>
+                    </div>
+                </div>
+                <div class="parallax responsive-img user-show-image">
+                    <img src="https://images.unsplash.com/photo-1466171488221-e15f4c40e9e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ef6e3c039b9b927a440c9ec38c65fcae&auto=format&fit=crop&w=800&q=60">
                 </div>
             </div>
-            <div class="parallax responsive-img user-show-image">
-                <img src="https://images.unsplash.com/photo-1466171488221-e15f4c40e9e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ef6e3c039b9b927a440c9ec38c65fcae&auto=format&fit=crop&w=800&q=60">
-            </div>
+
+            <h6>About {{user.firstName}} {{user.lastName}}</h6>
+
+            <p>{{user.about}}</p>
+
         </div>
-
-
 
         <!-- STOP TRYING THIS SHIT OUT BOI -->
 
-        <button class="btn">
-            <a href="/users">back to users</a>
-        </button>
+
     </div>
 </div>
 

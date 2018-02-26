@@ -53,15 +53,13 @@ nav {
 /* =================================================== */
 /* SHOW PAGE STYLES */
 .show-container {
-  height: 100vh;
-  margin-top: 20px;;
-  width: 33vw;
+  margin: 20px 0 0 20px;
   padding: 20px;
 }
 /* END OF SHOW PAGE STYLES */
 
 a {
-  color: #00B7FF;
+  color: inherit;
 }
 
 .profile {
@@ -90,6 +88,7 @@ a {
 
 .btn {
   background: black;
+  width: 100%;
 }
 
 .page-footer {
@@ -120,4 +119,16 @@ a {
   margin: 20px 0;
 }
 
+.show-page-right {
+  margin: 20px 40px 0 0;
+}
+
 /* END USER SHOW PAGE */
+
+/* PROPERTIES INDEX PAGE */
+
+.property-index {
+  margin: 0 40px 0 0;
+}
+
+/* END PROPERTIES INDEX PAGE */
