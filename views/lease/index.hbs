@@ -1,47 +1,64 @@
-{{!-- {{#each leases}}
-<div>
-    <img class="responsive-img" src="{{homeImage}}"/>
-    <p><a href="leases/{{id}}">{{address}}</a></p>
-    <p>Rent paid: ${{rentPaid}}</p>
+<div class="sidenav-container">
+    <ul id="slide-out" class="side-nav fixed">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img class="responsive-img" src="https://images.unsplash.com/photo-1503990264798-c3f4cd657162?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ffa6c5bb5550761ee8d395fd9b05eb4a&auto=format&fit=crop&w=800&q=60">
+                </div>
+                <a href="/users/{{user.id}}">
+                    <img class="circle" src="{{user.image}}">
+                </a>
+                <a href="#!name">
+                    <span class="white-text name">{{user.firstName}} {{user.lastName}}</span>
+                </a>
+                <a href="#!email">
+                    <span class="white-text email">{{user.email}}</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="/users/{{user._id}}/properties">Properties</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="/users/{{user._id}}/leases">Leases</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a href="/users/{{user._id}}/edit">Edit Profile</a>
+        </li>
+    </ul>
 </div>
-{{/each}} --}}
+
+<div class="property-lease-index-nav">
+    <a href="#" data-activates="slide-out" class="button-collapse">
+        <i class="material-icons icon-position">account_circle</i>
+    </a>
+    <a href="/users/{{user.id}}/properties/new">Add Property</a> | 
+    <a href="/users/{{user.id}}">Back to User</a>
+</div>
 
 <div class="row">
-    <div class="col l4 s4">
-        <div class="container show-container">
-            <img class="profile responsive-img" src="{{user.image}}" />
-            <h5>{{user.username}}</h5>
-            <h5>{{user.firstName}} {{user.lastName}}</h5>
-            <h6>{{user.email}}</h6>
-            <h6>{{user.phoneNumber}}</h6>
+    <div class="col l2 s12"></div>
+    
 
-            <button class="btn">
-                <a href="/users/{{user._id}}/properties">Properties</a>
-            </button>
-            <button class="btn">
-                <a href="/users/{{user._id}}/leases">Leases</a>
-            </button>
-            <button class="btn">
-                <a href="/users/{{user._id}}/edit">Edit Account</a>
-            </button>
-            <form action="/users/{{user.id}}?_method=DELETE" method="POST">
-                <button class="btn" type="submit">Delete {{user.username}}</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="col l8 s8 container">
+    <div class="col l10 s12 container">
         <h4>Leases</h4>
         {{#each leases}}
-        <p><a href="leases/{{id}}">{{address}}</a></p>
+        <p>
+            <a href="leases/{{id}}">{{address}}</a>
+        </p>
         <p>Rent Paid: ${{rentPaid}}</p>
         {{/each}}
 
-<div>
-    <button class="btn">
-        <a href="leases/new">Add New Lease</a>
-    </button>
-    <button class="btn">
-        <a href="/users/{{user._id}}">Back to user</a>
-    </button>
+        <div>
+            <button class="btn">
+                <a href="leases/new">Add New Lease</a>
+            </button>
+            <button class="btn">
+                <a href="/users/{{user._id}}">Back to user</a>
+            </button>
+        </div>
+    </div>
 </div>

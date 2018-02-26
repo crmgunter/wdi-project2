@@ -1,12 +1,18 @@
-<img  class="responsive-img" src="{{property.homeImage}}"/>
-<p>{{property.address}}</p>
-<p>{{property.price}}</p>
-<p>{{property.landlord}}</p>
-<p>{{property.description}}</p>
+<div class="container property-show">
+    <img class="responsive-img general-img-style" src="{{property.homeImage}}" />
+    <p>{{property.address}}</p>
+    <p>Monthly Rent: ${{property.price}}</p>
+    <p>Landlord: {{property.landlord}}</p>
+    <p>Description: {{property.description}}</p>
 
-<button class="btn"><a href="/users/{{userId}}/properties/{{property._id}}/edit">Edit this property</a></button>
-<button class="btn"><a href="/users/{{userId}}/properties">Back to properties</a></button>
+    <button class="btn">
+        <a href="/users/{{userId}}/properties/{{property._id}}/edit">Edit this property</a>
+    </button>
+    <button class="btn">
+        <a href="/users/{{userId}}/properties">Back to properties</a>
+    </button>
 
-<form method="POST" action="/users/{{userId}}/properties/{{property._id}}?_method=DELETE">
-    <button class="btn" type="submit">Delete this property</button>
-</form>
+    <form method="POST" action="/users/{{userId}}/properties/{{property._id}}?_method=DELETE">
+        <button class="btn" type="submit">Delete this property</button>
+    </form>
+</div>
