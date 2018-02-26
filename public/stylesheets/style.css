@@ -62,6 +62,10 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: blue;
+}
+
 .profile {
   border:1px, solid, black;
   border-radius: 50%;
@@ -71,6 +75,10 @@ a {
 
 /* =================================================== */
 /* USER INDEX PAGE STYLES */
+.user-index {
+  margin: 30px;
+}
+
 .user-container-thumbnail {
   display: flex;
   justify-content: center;
