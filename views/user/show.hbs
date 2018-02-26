@@ -7,15 +7,19 @@
             <h6>{{user.email}}</h6>
             <h6>{{user.phoneNumber}}</h6>
 
-            <button class="btn">
+            <button class="btn show-btn">
                 <a href="/users/{{user._id}}/properties">Properties</a>
             </button>
-            <button class="btn">
+            <button class="btn show-btn">
                 <a href="/users/{{user._id}}/leases">Leases</a>
             </button>
-            <button class="btn">
+            <button class="btn show-btn">
                 <a href="/users/{{user._id}}/edit">Edit Account</a>
             </button>
+
+            <h6>About {{user.firstName}} {{user.lastName}}:</h6>
+
+            <p>{{user.about}}</p>
         </div>
     </div>
 
@@ -54,9 +58,7 @@
                 </div>
             </div>
 
-            <h6>About {{user.firstName}} {{user.lastName}}</h6>
-
-            <p>{{user.about}}</p>
+            
 
         </div>
 

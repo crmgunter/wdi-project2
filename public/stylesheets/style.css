@@ -15,6 +15,10 @@ nav {
   background: black;
 }
 
+.general-img-style {
+  width: 600px;
+}
+
 /* =================================================== */
 /* THIS SECTION IS FOR THE LANDING SCREEN SIGN UP SECTION */
 
@@ -96,7 +100,7 @@ a:hover {
 
 .btn {
   background: black;
-  width: 100%;
+  margin: 5px 0;
 }
 
 .page-footer {
@@ -131,6 +135,10 @@ a:hover {
   margin: 20px 40px 0 0;
 }
 
+.show-btn {
+  width: 200px;
+}
+
 /* END USER SHOW PAGE */
 
 /* PROPERTIES INDEX PAGE */
@@ -139,4 +147,18 @@ a:hover {
   margin: 0 40px 0 0;
 }
 
+.icon-position {
+  position: absolute;
+  left: 20px;
+}
+
+.property-lease-index-nav {
+  text-align: right;
+  margin: 20px 20px 0 0;
+  font-size: 16px;
+}
+
 /* END PROPERTIES INDEX PAGE */
+
+
+

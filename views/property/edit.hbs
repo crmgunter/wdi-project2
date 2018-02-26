@@ -1,6 +1,6 @@
 <h1>Edit {{property.address}}</h1>
 
-<form method="POST" action="/users/{{userId}}/properties/{{property._id}}?_method=PATCH">
+<form class="newuser-form-container" method="POST" action="/users/{{userId}}/properties/{{property._id}}?_method=PATCH">
     <div>
         <label for="address">Address</label>
         <input type="text" name="address" value="{{property.address}}">
@@ -21,13 +21,9 @@
         <label for="homeImage">Image URL</label>
         <input type="text" name="homeImage" value="{{property.homeImage}}">
     </div>
-    <button type="submit">Update account</button>
-
+    <button class="btn" type="submit">Update account</button>
+    <button class="btn">
+        <a href="/users/{{userId}}/properties/{{property.id}}">cancel</a>
+    </button>
     
 </form>
-
-<form action="/users/{{user.id}}?_method=DELETE" method="POST">
-                <button class="btn" type="submit">Delete {{user.username}}</button>
-            </form>
-
-<button><a href="/users/{{userId}}/properties">cancel</a></button>

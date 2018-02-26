@@ -1,6 +1,6 @@
 <h1>edit {{user.username}}</h1>
 
-<form method="POST" action="/users/{{id}}?_method=PATCH">
+<form class="newuser-form-container" method="POST" action="/users/{{id}}?_method=PATCH">
     <div>
         <label for="username">Your Username</label>
         <input type="text" name="username" value="{{user.username}}">
@@ -29,9 +29,9 @@
         <label for="about">User Description</label>
         <input type="text" name="about">
     </div>
-    <button type="submit">Update account</button>
+    <button class="btn" type="submit">Update account</button>
 
-    <button>
+    <button class="btn">
         <a href="/users/{{id}}">cancel</a>
     </button>
 
