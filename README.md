@@ -28,3 +28,6 @@ https://imgur.com/a/BUWBe
 
 # Link to Trello
 https://trello.com/b/5DtIHLTo/wdi-project-2
+
+# Sources Used
+Jquery, Materialize CSS, MongoDB, Mongoose, Handlebars, Express, Node.js
