@@ -25,7 +25,8 @@ router.post('/', (req, res) => {
     email: req.body.email,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    phoneNumber: req.body.phoneNumber
+    phoneNumber: req.body.phoneNumber,
+    about: req.body.about
   })
   newUser.save().then((savedUser) => {
     res.redirect(`/users/${savedUser._id}`)
@@ -59,8 +60,9 @@ router.patch('/:id', (req, res) => {
     email: req.body.email,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    phoneNumber: req.body.phoneNumber
-  }, {new: true}).then((updatedUser) => {
+    phoneNumber: req.body.phoneNumber,
+    about: req.body.about
+  }, { new: true }).then((updatedUser) => {
     res.redirect(`/users/${updatedUser.id}`)
   })
 })

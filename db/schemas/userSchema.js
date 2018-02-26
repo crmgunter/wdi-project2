@@ -11,7 +11,8 @@ const userSchema = new Schema ({
     lastName: String,
     phoneNumber: Number,
     properties: [propertySchema],
-    leases: [leaseSchema]
+    leases: [leaseSchema],
+    about: String
 })
 
 module.exports = userSchema
