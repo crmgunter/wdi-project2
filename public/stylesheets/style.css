@@ -55,7 +55,6 @@ nav {
 .show-container {
   height: 100vh;
   margin-top: 20px;;
-  background: gray;
   width: 33vw;
   padding: 20px;
 }
@@ -96,3 +95,29 @@ a {
 .page-footer {
   background-color: red;
 }
+
+/* USER SHOW PAGE */
+.user-container {
+  width: 100%;
+}
+
+.user-show-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  height: 20%;
+  display: flex;
+}
+
+.user-show-box-text {
+  margin: auto;
+  color: white;
+}
+
+.each-user-show-image {
+  margin: 20px 0;
+}
+
+/* END USER SHOW PAGE */

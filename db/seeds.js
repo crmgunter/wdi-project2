@@ -37,7 +37,9 @@ const hillStLease = new Lease({
     property: [hillSt],
     rentDue: 1200,
     tenants: "Ben, Jeff, Cam",
-    rentPaid: 800
+    rentPaid: 800,
+    homeImage: "https://circaoldhouses.com/wp-content/uploads/2017/10/key-hole-house-1.jpg",
+    address: "123 Poop St SE"
 })
 
 const cameron = new User({
