@@ -1,12 +1,44 @@
 <h1>{{user.username}}</h1>
 
-{{#each leases}}
+{{!-- {{#each leases}}
 <div>
     <img class="responsive-img" src="{{homeImage}}"/>
     <p><a href="leases/{{id}}">{{address}}</a></p>
     <p>Rent paid: ${{rentPaid}}</p>
 </div>
-{{/each}}
+{{/each}} --}}
+
+<div class="row">
+    <div class="col l4 s4">
+        <div class="container show-container">
+            <img class="profile responsive-img" src="{{user.image}}" />
+            <h5>{{user.username}}</h5>
+            <h5>{{user.firstName}} {{user.lastName}}</h5>
+            <h6>{{user.email}}</h6>
+            <h6>{{user.phoneNumber}}</h6>
+
+            <button class="btn">
+                <a href="/users/{{user._id}}/properties">Properties</a>
+            </button>
+            <button class="btn">
+                <a href="/users/{{user._id}}/leases">Leases</a>
+            </button>
+            <button class="btn">
+                <a href="/users/{{user._id}}/edit">Edit Account</a>
+            </button>
+            <form action="/users/{{user.id}}?_method=DELETE" method="POST">
+                <button class="btn" type="submit">Delete {{user.username}}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col l8 s8 container">
+        <h4>Leases</h4>
+        {{#each leases}}
+        <img class="responsive-img" src="{{homeImage}}" />
+        <p><a href="leases/{{id}}">{{address}}</a></p>
+        <p>Rent Paid: ${{rentPaid}}</p>
+        {{/each}}
 
 <div>
     <button class="btn">
