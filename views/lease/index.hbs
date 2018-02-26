@@ -2,7 +2,10 @@
 
 {{#each leases}}
 <div>
-    <p>{{property}}</p>
+    {{#each property}}
+    <img class="responsive-img" src="{{homeImage}}"/>
+    <p><a href="properties/{{id}}">{{address}}</a></p>
+    {{/each}}
     <p><a href="leases/{{id}}">{{tenants}}</a></p>
     <p>{{rentDue}}</p>
     <p>{{rentPaid}}</p>
