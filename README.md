@@ -4,6 +4,8 @@ This app is meant for a real estate company to keep track of specific landlords'
 
 Properties and Leases are both nested in the User model. The idea is that when a user is on a user profile, they can access all properties and leases that are unique to that user profile. 
 
+Certain parts of sign up form are required.
+
 This app is technically responsive, but does not look good on a phone. Things are way too small so in the future I'd like to fix that issue. 
 
 Also, I'd like to have something nested in the Lease model. For example, adding a tenants model so that when you are in leases and want to see more info on a specific tenant, you could click a tenant name and pull up a tenant profile with their information. 
