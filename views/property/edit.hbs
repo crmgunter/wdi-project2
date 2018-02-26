@@ -26,4 +26,8 @@
     
 </form>
 
+<form action="/users/{{user.id}}?_method=DELETE" method="POST">
+                <button class="btn" type="submit">Delete {{user.username}}</button>
+            </form>
+
 <button><a href="/users/{{userId}}/properties">cancel</a></button>

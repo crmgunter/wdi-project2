@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col l4 s4 left-side-user-page">
+    <div class="col l4 s12 left-side-user-page">
         <div class="container show-container">
             <img class="profile responsive-img" src="{{user.image}}" />
             <h5>{{user.username}}</h5>
@@ -16,13 +16,10 @@
             <button class="btn">
                 <a href="/users/{{user._id}}/edit">Edit Account</a>
             </button>
-            <form action="/users/{{user.id}}?_method=DELETE" method="POST">
-                <button class="btn" type="submit">Delete {{user.username}}</button>
-            </form>
         </div>
     </div>
 
-    <div class="col l8 s8 container">
+    <div class="col l8 s12 container">
 
 
         <!-- 

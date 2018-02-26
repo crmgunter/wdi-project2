@@ -26,10 +26,18 @@
         <input type="text" name="image" value="{{user.image}}">
     </div>
     <div>
-            <label for="about">User Description</label>
-            <input type="text" name="about">
-        </div>
+        <label for="about">User Description</label>
+        <input type="text" name="about">
+    </div>
     <button type="submit">Update account</button>
 
-    <button><a href="/users/{{id}}">cancel</a></button>
+    <button>
+        <a href="/users/{{id}}">cancel</a>
+    </button>
+
+
+</form>
+
+<form action="/users/{{user.id}}?_method=DELETE" method="POST">
+    <button class="btn red" type="submit">Delete {{user.username}}</button>
 </form>
