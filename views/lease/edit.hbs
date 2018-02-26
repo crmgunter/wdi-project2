@@ -1,8 +1,12 @@
 <h1>Edit Lease</h1>
 <form class="newuser-form-container" method="POST" action="/users/{{userId}}/leases/{{lease._id}}?_method=PATCH">
     <div>
-        <label for="property">property</label>
-        <input type="text" name="property" value="{{lease.property}}">
+        <label for="address">address</label>
+        <input type="text" name="address" value="{{lease.address}}">
+    </div>
+    <div>
+        <label for="homeImage">Image URL</label>
+        <input type="text" name="homeImage" value="{{lease.homeImage}}">
     </div>
     <div>
         <label for="tenants">tenants</label>
