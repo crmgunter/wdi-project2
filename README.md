@@ -10,6 +10,9 @@ Also, I'd like to have something nested in the Lease model. For example, adding 
 
 I seem to have a bug on heroku as well. When the app is opened on heroku, two (seeded) users pop up in the user index page, but two empty images also pop up and I'm not sure why. I think I must be seeding some empty arrays or something. Not sure. Will try to figure that out.
 
+One more thing about heroku -
+I think because my images are not stored locally, heroku doesn't want to open them when the app starts. You can get the images by clicking "Load Unsafe Scripts" in the url bar.
+
 
 # Link to Heroku 
 https://sleepy-sierra-89764.herokuapp.com/
