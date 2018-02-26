@@ -1,13 +1,15 @@
 <h1>hello clarice</h1>
 
+<img class="responsive-img" src="{{lease.homeImage}}"/>
+<p>{{lease.address}}</p>
 <p>{{lease.tenants}}</p>
-<p>{{lease.rentDue}}</p>
-<p>{{lease.rentPaid}}</p>
+<p>Total Rent: ${{lease.rentDue}}</p>
+<p>Rent Paid: ${{lease.rentPaid}}</p>
 
 
 
-<button class="btn"><a href="/users/{{userId}}/leases/{{lease._id}}/edit">Edit this property</a></button>
-<button class="btn"><a href="/users/{{userId}}/leases">Back to User</a></button>
+<button class="btn"><a href="/users/{{userId}}/leases/{{lease._id}}/edit">Edit this Lease</a></button>
+<button class="btn"><a href="/users/{{userId}}/leases">Back to Leases</a></button>
 <form method="POST" action="/users/{{userId}}/leases/{{lease._id}}?_method=DELETE">
-    <button class="btn" type="submit">Delete this property</button>
+    <button class="btn" type="submit">Delete this lease</button>
 </form>

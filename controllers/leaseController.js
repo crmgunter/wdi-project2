@@ -32,6 +32,8 @@ router.post('/', (req, res) => {
     User.findById(userId).then((user) => {
         const newLease = new Lease({
             property: req.body.property,
+            homeImage: req.body.homeImage,
+            address: req.body.address,
             tenants: req.body.tenants,
             rentDue: req.body.rentDue,
             rentPaid: req.body.rentPaid
@@ -72,6 +74,8 @@ router.patch('/:id', (req, res) => {
     User.findById(req.params.userId).then((user) => {
         const lease = user.leases.id(req.params.id)
         lease.property = req.body.property
+        lease.homeImage = req.body.homeImage
+        lease.address = req.body.address
         lease.tenants = req.body.tenants
         lease.rentDue = req.body.rentDue
         lease.rentPaid = req.body.rentPaid
