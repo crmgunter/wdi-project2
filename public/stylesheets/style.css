@@ -4,7 +4,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 main {
@@ -37,12 +37,24 @@ nav {
   margin: auto;
   color: white;
   background: rgba(0, 0, 0, .5);
-  height: 50%;
+  height: 50vh;
+  width: 50vw;
+  padding: 0 30px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.land-text2 {
+  margin: auto;
+  color: white;
+  background: rgba(0, 0, 0, .5);
+  height: 90%;
   width: 50%;
   padding: 0 30px;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
 }
+
 /* THIS IS END OF LANDING SCREEN SIGN UP SECTION */
 
 /* =================================================== */

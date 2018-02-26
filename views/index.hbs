@@ -6,7 +6,7 @@
 with other websites. You could see there was text coming out of her eyes, text
 coming out of her wherever. I'm speaking with myself, number one, because I have
 a very good brain and I've said a lot of things.</p>
-<button class="btn white black-text"><a href="/users/new">Join now!</a></button>
+<button class="btn white black-text"><a href="/users">Take a Tour</a></button>
         </div>
     </div>
     <div class="parallax"><img src="https://images.unsplash.com/photo-1486814758653-7e3f452bdddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b4c4fcb1554eeb515cd091e0305c2edb&auto=format&fit=crop&w=800&q=60"></div>
@@ -27,6 +27,43 @@ other parts of my website. My text is long and beautiful, as, it has been well
 documented, are various other parts of my website.</p>
     </div>
   </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="https://images.unsplash.com/photo-1475698066764-3dc9200f1c93?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3e3f5e6ae82e4d561e9b68f3e87f3d9&auto=format&fit=crop&w=800&q=60"></div>
+  <div class="parallax-container cover">
+      <div class="container land-text2 newuser-form-container">
+    <form method="POST" action="/users">
+        <div>
+            <label for="username">Your Username</label>
+            <input type="text" name="username" required>
+        </div>
+        <div>
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" required>
+        </div>
+        <div>
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName" required>
+        </div>
+        <div>
+            <label for="email">Enter a valid email</label>
+            <input type="text" name="email" required>
+        </div>
+        <div>
+            <label for="phoneNumber">Phone number</label>
+            <input type="text" name="phoneNumber">
+        </div>
+        <div>
+            <label for="image">Image URL</label>
+            <input type="text" name="image">
+        </div>
+        <div>
+            <label for="about">User Description</label>
+            <input type="text" name="about">
+        </div>
+        <button class="btn" type="submit">Create account</button>
+
+        <button class="btn">
+            <a href="/users">To users</a>
+        </button>
+    </form>
+</div>
+    <div class="parallax"><img src="https://images.unsplash.com/photo-1496564203457-11bb12075d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=278fa59687fedfcfd1a2822089593743&auto=format&fit=crop&w=1119&q=80"></div>
   </div>
