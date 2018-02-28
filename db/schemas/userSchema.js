@@ -3,7 +3,7 @@ const propertySchema = require('./propertySchema')
 const leaseSchema = require('./leaseSchema')
 const Schema = mongoose.Schema
 
-const userSchema = new Schema ({
+const userSchema = new Schema({
     username: String,
     image: String,
     email: String,
